@@ -1,9 +1,14 @@
 {% extends 'base.html' %}
-{% block headline %}Monkeys type Shakespeare{% endblock headline %}
+{% block headline %}Headline goes here{% endblock headline %}
 {% block byline %}By Leigh Krietsch Boerner{% endblock byline %}
 {% block pubdate %}
   <time datetime="2024-03-07" pubdate>March 7, 2024</time>
 {% endblock pubdate %}
-{% block content %}
 
+
+
+{% block content %}
+{% for obj in harvard_park_homicides %}
+{{ obj.first_name }} {{ obj.last_name }}<br>
+{% endfor %}
 {% endblock content %}
